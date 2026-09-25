@@ -227,10 +227,10 @@ h3 {
 }
 
 .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    margin-bottom: 30px;
+     display: grid;
+     grid-template-columns: repeat(2, minmax(0, 1fr));
+     gap: 20px;
+     margin-bottom: 30px;
 }
 
 .small-card {
@@ -333,6 +333,10 @@ h3 {
 }
 
 @media (max-width: 768px) {
+    .card-grid {
+         grid-template-columns: 1fr;
+    }
+
     .logo {
         font-size: 2.5rem;
     }
@@ -454,7 +458,7 @@ function loadSettings() {
     
     document.getElementById('homeIntroText').textContent = localStorage.getItem('homeIntro') || '你還在獨自奮戰嗎？加入我們，這裡不只是戰隊，更是你展現身手、突破自我！';
     document.getElementById('joinTitleText').textContent = localStorage.getItem('joinTitle') || '🔥 加入我們，書寫你的傳奇！';
-    document.getElementById('joinDescText').textContent = localStorage.getItem('joinDesc') || '加入我們 ，書寫你的傳奇！如果你渴望成長、熱愛競技，現在就透過下面按鈕加入我們，與強者同行！';
+    document.getElementById('joinDescText').textContent = localStorage.getItem('joinDesc') || '如果你渴望成長、熱愛競技，現在就透過下面按鈕加入我們，與強者同行！';
     document.getElementById('discordLinkBtn').href = localStorage.getItem('discordLink') || 'https://discord.gg/UDBPVTsu2x';
     
     document.getElementById('feature1Title').textContent = localStorage.getItem('feature1Title') || '⚔️ 多樣武器';
@@ -464,7 +468,7 @@ function loadSettings() {
     document.getElementById('feature3Title').textContent = localStorage.getItem('feature3Title') || '📊 明確分類';
     document.getElementById('feature3Desc').textContent = localStorage.getItem('feature3Desc') || '戰隊整體有明確分類';
     document.getElementById('feature4Title').textContent = localStorage.getItem('feature4Title') || '🎯 團戰配合';
-    document.getElementById('feature4Desc').textContent = localStorage.getItem('feature4Desc') || '定期舉辦團戰，培養團隊默契與配合';
+    document.getElementById('feature4Desc').textContent = localStorage.getItem('feature4Desc') || '有時舉辦團戰，培養團隊默契與配合';
     
     const youtubeId = localStorage.getItem('youtubeId') || 'u1A5vfQ758A';
     document.getElementById('youtubeFrame').src = 'https://www.youtube.com/embed/' + youtubeId;
